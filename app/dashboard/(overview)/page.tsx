@@ -12,6 +12,7 @@ import {
 
 interface Props {}
 
+export const dynamic = 'force-dynamic';
 const Page: NextPage<Props> = async ({}) => {
   return (
     <main>
