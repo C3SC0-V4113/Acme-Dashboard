@@ -12,16 +12,14 @@ import { fetchInvoicesPages } from '@/app/lib/data';
 export const metadata: Metadata = {
   title: 'Invoices',
 };
-interface Props {}
-
-const Page: NextPage<Props> = async ({
-  searchParams,
-}: {
+interface Props {
   searchParams?: {
     query?: string;
     page?: string;
   };
-}) => {
+}
+
+const Page: NextPage<Props> = async ({ searchParams }) => {
   const query = searchParams?.query || '';
   const currentPage = Number(searchParams?.page) || 1;
   const totalPages = await fetchInvoicesPages(query);
