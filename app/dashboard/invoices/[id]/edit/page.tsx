@@ -1,4 +1,4 @@
-import { NextPage } from 'next';
+import { Metadata, NextPage } from 'next';
 import { notFound } from 'next/navigation';
 import Breadcrumbs from '@/app/ui/invoices/breadcrumbs';
 import Form from '@/app/ui/invoices/edit-form';
@@ -7,6 +7,10 @@ import { fetchCustomers, fetchInvoiceById } from '@/app/lib/data';
 interface Props {
   params: { id: string };
 }
+
+export const metadata: Metadata = {
+  title: 'Edit Invoice',
+};
 
 const Page: NextPage<Props> = async ({ params }) => {
   const id = params.id;

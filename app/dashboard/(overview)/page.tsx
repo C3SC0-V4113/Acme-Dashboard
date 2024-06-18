@@ -1,4 +1,4 @@
-import { NextPage } from 'next';
+import { Metadata, NextPage } from 'next';
 import { lusitana } from '../../ui/fonts';
 import RevenueChart from '../../ui/dashboard/revenue-chart';
 import LatestInvoices from '../../ui/dashboard/latest-invoices';
@@ -11,6 +11,10 @@ import {
 } from '@/app/ui/skeletons';
 
 interface Props {}
+
+export const metadata: Metadata = {
+  title: 'Dashboard',
+};
 
 export const dynamic = 'force-dynamic';
 const Page: NextPage<Props> = async ({}) => {

@@ -1,9 +1,11 @@
-import { NextPage } from 'next';
+import { Metadata, NextPage } from 'next';
 import AcmeLogo from '../ui/acme-logo';
 import LoginForm from '../ui/login-form';
 
 interface Props {}
-
+export const metadata: Metadata = {
+  title: 'Login',
+};
 const LoginPage: NextPage<Props> = ({}) => {
   return (
     <main className="flex items-center justify-center md:h-screen">
